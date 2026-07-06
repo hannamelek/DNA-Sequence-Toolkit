@@ -75,4 +75,5 @@ print("Reverse Complement:", reverse)
 rna = dna.replace("T", "U")
 print("RNA Sequence:", rna)
 
-# %%
+
+
