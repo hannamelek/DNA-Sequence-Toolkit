@@ -75,5 +75,30 @@ print("Reverse Complement:", reverse)
 rna = dna.replace("T", "U")
 print("RNA Sequence:", rna)
 
+#%%
+#translation to Protein
+
+from codon_table import CODON_TABLE
+
+protein = ""
+for i in range(0,len(rna), 3):
+    codon = rna[i:i+3]
+
+    if len(codon) != 3:
+        break
+
+    amino = CODON_TABLE.get(codon)
+    
+    if amino == "Stop":
+        break
+
+    if amino:
+        protein += amino
+
+    print(protein)
 
 
+
+
+
+# %%
