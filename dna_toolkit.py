@@ -49,13 +49,25 @@ plt.show()
 #%%
 #GC content calculation
 
-gc_content = (g + c)/ length * 100
+gc = (g + c)/ length * 100
+print(f"GC Content: {gc:.2f}%")
 
-print(f"GC Gcontent: {gc_content:.2f}%")
+# %%
+# reverse complement
 
+complement = {
+    "A": "T",
+    "T": "A",
+    "G": "C",
+    "C": "G",
+}
 
+reverse = ""
+for base in dna:
+    reverse += complement[base]
 
+reverse = reverse[::-1]
 
-
+print("Reverse Complement:", reverse)
 
 # %%
