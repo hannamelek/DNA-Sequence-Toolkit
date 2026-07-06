@@ -46,6 +46,12 @@ plt.savefig("nucleotide_counts.png")
 
 plt.show()
 
+#%%
+#GC content calculation
+
+gc_content = (g + c)/ length * 100
+
+print(f"GC Gcontent: {gc_content:.2f}%")
 
 
 
