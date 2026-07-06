@@ -71,3 +71,9 @@ reverse = reverse[::-1]
 print("Reverse Complement:", reverse)
 
 # %%
+#Transcription to RNA
+
+rna = dna.replace("T", "U")
+print("RNA Sequence:", rna)
+
+# %%
