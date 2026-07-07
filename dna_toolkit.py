@@ -95,7 +95,16 @@ for i in range(0,len(rna), 3):
     if amino:
         protein += amino
 
-    print(protein)
+print(protein)
+
+#%%
+print("\n===== DNA Sequence Toolkit =====")
+print("DNA :", dna)
+print("Length:", length)
+print(f"GC Content: {gc:.2f}%")
+print("Reverse Complement:", reverse)
+print("RNA:", rna)
+print("Protein:", protein)
 
 
 
