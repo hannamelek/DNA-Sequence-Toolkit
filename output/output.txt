@@ -1,11 +1,13 @@
 
-========== DNA Sequence Toolkit ==========
-DNA Sequence          : GGGCCCATAATG
-Sequence Length       : 12 bp
-GC Content            : 58.33%
-Reverse Complement    : CATTATGGGCCC
-RNA Sequence          : GGGCCCAUAAUG
-Protein Sequence      : GPIM
+=========== DNA Sequence Toolkit ===========
 
-Status                : Analysis completed successfully.
+Input File          : sample_sequences.fasta
+Sequence Name       : Human_Test_Sequence
+DNA Sequence        : ATGGCTAACCGTTAGCGATCGATCGTAGCTA
+Sequence Length     : 31 bp
+GC Content          : 48.39%
+Reverse Complement  : TAGCTACGATCGATCGCTAACGGTTAGCCAT
+RNA Sequence        : AUGGCUAACCGUUAGCGAUCGAUCGUAGCUA
+Protein Sequence    : MANR*RSIVA
 
+Status              : Analysis completed successfully.
