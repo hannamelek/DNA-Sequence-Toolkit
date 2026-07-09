@@ -1,0 +1,11 @@
+
+========== DNA Sequence Toolkit ==========
+DNA Sequence          : ATGGCTAACCGTTAG
+Sequence Length       : 15 bp
+GC Content            : 46.67%
+Reverse Complement    : CTAACGGTTAGCCAT
+RNA Sequence          : AUGGCUAACCGUUAG
+Protein Sequence      : MANR*
+
+Status                : Analysis completed successfully.
+
