@@ -1,2 +1,2 @@
-Sequence Name,Length(bp),A,T,G,C,GC Content(%),AT Content(%),Reverse Complement,RNA Sequence,Protein Sequence
-Human_Test_Sequence,31,8,8,8,7,48.39,51.61,TAGCTACGATCGATCGCTAACGGTTAGCCAT,AUGGCUAACCGUUAGCGAUCGAUCGUAGCUA,MANR*RSIVA
+Sequence Name,Length(bp),A,T,G,C,GC Content(%),AT Content(%),Reverse Complement,RNA Sequence,ORF,Protein Sequence
+Human_Test_Sequence,31,8,8,8,7,48.39,51.61,TAGCTACGATCGATCGCTAACGGTTAGCCAT,AUGGCUAACCGUUAGCGAUCGAUCGUAGCUA,AUGGCUAACCGUUAG,MANR*RSIVA
