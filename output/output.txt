@@ -8,6 +8,7 @@ Sequence Length     : 31 bp
 GC Content          : 48.39%
 Reverse Complement  : TAGCTACGATCGATCGCTAACGGTTAGCCAT
 RNA Sequence        : AUGGCUAACCGUUAGCGAUCGAUCGUAGCUA
+ORF                 : AUGGCUAACCGUUAG
 Protein Sequence    : MANR*RSIVA
 
 Status              : Analysis completed successfully.
