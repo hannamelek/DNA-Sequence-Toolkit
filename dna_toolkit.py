@@ -98,21 +98,26 @@ for i in range(0,len(rna), 3):
 print(protein)
 
 #%%
-
 report = f"""
-===== DNA Sequence Toolkit =====
-DNA :{dna}
-Length: {length}
-GC Content: {gc:.2f}%
-Reverse Complement: {reverse} 
-RNA: {rna}
-Protein: {protein}
+========== DNA Sequence Toolkit ==========
+DNA Sequence          : {dna}
+Sequence Length       : {length} bp
+GC Content            : {gc:.2f}%
+Reverse Complement    : {reverse}
+RNA Sequence          : {rna}
+Protein Sequence      : {protein}
+
+Status                : Analysis completed successfully.
+
 """
 
 print(report)
 
 with open("output/output.txt", "w") as file:
     file.write(report)
+
+
+
 
 
 
