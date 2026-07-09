@@ -106,6 +106,7 @@ print("Reverse Complement:", reverse)
 rna = dna.replace("T", "U")
 print("RNA Sequence:", rna)
 
+#%%
 #finding ORFs
 
 stop_codons = ["UAA", "UAG", "UGA"]
@@ -160,6 +161,7 @@ Sequence Length     : {length} bp
 GC Content          : {gc:.2f}%
 Reverse Complement  : {reverse}
 RNA Sequence        : {rna}
+ORF                 : {orf}
 Protein Sequence    : {protein}
 
 Status              : Analysis completed successfully.
@@ -188,6 +190,7 @@ with open("output/results.csv", "w", newline="") as file:
         "AT Content(%)",
         "Reverse Complement",
         "RNA Sequence",
+        "ORF",
         "Protein Sequence"
    ])
     
@@ -202,6 +205,7 @@ with open("output/results.csv", "w", newline="") as file:
         f"{at:.2f}",
         reverse,
         rna,
+        orf,
         protein
     ])
 
