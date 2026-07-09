@@ -73,6 +73,12 @@ plt.show()
 gc = (g + c)/ length * 100
 print(f"GC Content: {gc:.2f}%")
 
+#%%
+# AT content calculation
+
+at = ( a + t) / length * 100
+print(f"AT Content: {at:.2f}%")
+
 # %%
 # reverse complement
 
@@ -140,6 +146,39 @@ with open("output/output.txt", "w") as file:
     file.write(report)
 
 
+#%%
+#csv results
+import csv
+with open("output/results.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+
+    writer.writerow([
+        "Sequence Name",
+        "Length(bp)",
+        "A",
+        "T",
+        "G",
+        "C",
+        "GC Content(%)",
+        "AT Content(%)",
+        "Reverse Complement",
+        "RNA Sequence",
+        "Protein Sequence"
+   ])
+    
+    writer.writerow([
+        sequence_name,
+        length,
+        a,
+        t,
+        g,
+        c,
+        f"{gc:.2f}",
+        f"{at:.2f}",
+        reverse,
+        rna,
+        protein
+    ])
 
 
 
