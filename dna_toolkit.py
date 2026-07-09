@@ -1,8 +1,29 @@
 #Project name:DNA Sequence Toolkit
 
 #%%
+
+def read_fasta(filename):
+    header = ""
+    sequence = ""
+
+    with open(filename, "r") as file:
+        for line in file:
+            line = line.strip()
+
+            if line.startswith(">"):
+                header = line[1:]      
+            else:
+                sequence += line
+
+    return header, sequence
+
+
 #DNA input
-dna = input("Enter a DNA Sequence:").upper()
+filename = "sample_sequences.fasta"
+
+sequence_name, dna = read_fasta(filename)
+
+dna = dna.upper()
 
 #validation of DNA sequence
 valid_bases = "ATGC"
@@ -42,7 +63,7 @@ plt.title("Nucleotide Counts")
 plt.xlabel("Bases")
 plt.ylabel("Count")
 
-plt.savefig("nucleotide_counts.png")
+plt.savefig("output/nucleotide_counts.png")
 
 plt.show()
 
@@ -99,16 +120,18 @@ print(protein)
 
 #%%
 report = f"""
-========== DNA Sequence Toolkit ==========
-DNA Sequence          : {dna}
-Sequence Length       : {length} bp
-GC Content            : {gc:.2f}%
-Reverse Complement    : {reverse}
-RNA Sequence          : {rna}
-Protein Sequence      : {protein}
+=========== DNA Sequence Toolkit ===========
 
-Status                : Analysis completed successfully.
+Input File          : {filename}
+Sequence Name       : {sequence_name}
+DNA Sequence        : {dna}
+Sequence Length     : {length} bp
+GC Content          : {gc:.2f}%
+Reverse Complement  : {reverse}
+RNA Sequence        : {rna}
+Protein Sequence    : {protein}
 
+Status              : Analysis completed successfully.
 """
 
 print(report)
