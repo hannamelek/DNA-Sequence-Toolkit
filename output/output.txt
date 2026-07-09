@@ -1,8 +1,11 @@
 
-===== DNA Sequence Toolkit =====
-DNA :GGGCCCATAATG
-Length: 12
-GC Content: 58.33%
-Reverse Complement: CATTATGGGCCC 
-RNA: GGGCCCAUAAUG
-Protein: GPIM
+========== DNA Sequence Toolkit ==========
+DNA Sequence          : GGGCCCATAATG
+Sequence Length       : 12 bp
+GC Content            : 58.33%
+Reverse Complement    : CATTATGGGCCC
+RNA Sequence          : GGGCCCAUAAUG
+Protein Sequence      : GPIM
+
+Status                : Analysis completed successfully.
+
