@@ -51,6 +51,10 @@ print("C:", c)
 
 #%%
 #Visualizing Nucleotide counts
+from multiprocessing.resource_sharer import stop
+
+from multiprocessing.resource_sharer import stop
+
 import matplotlib.pyplot as plt
 
 bases = ["A", "T", "G", "C"]
@@ -101,6 +105,27 @@ print("Reverse Complement:", reverse)
 #Transcription to RNA
 rna = dna.replace("T", "U")
 print("RNA Sequence:", rna)
+
+#finding ORFs
+
+stop_codons = ["UAA", "UAG", "UGA"]
+
+start = rna.find("AUG")
+
+if start == -1:
+    print("No ORF found!")
+
+else:
+
+    for i in range(start, len(rna), 3):
+        codon = rna[i:i+3]
+
+        if codon in stop_codons:
+            orf = rna[start:i+3]
+            break
+    print("ORF:", orf)
+        
+
 
 #%%
 #translation to Protein
