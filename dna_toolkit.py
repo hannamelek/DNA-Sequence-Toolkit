@@ -98,15 +98,21 @@ for i in range(0,len(rna), 3):
 print(protein)
 
 #%%
-print("\n===== DNA Sequence Toolkit =====")
-print("DNA :", dna)
-print("Length:", length)
-print(f"GC Content: {gc:.2f}%")
-print("Reverse Complement:", reverse)
-print("RNA:", rna)
-print("Protein:", protein)
 
+report = f"""
+===== DNA Sequence Toolkit =====
+DNA :{dna}
+Length: {length}
+GC Content: {gc:.2f}%
+Reverse Complement: {reverse} 
+RNA: {rna}
+Protein: {protein}
+"""
 
+print(report)
+
+with open("output/output.txt", "w") as file:
+    file.write(report)
 
 
 
