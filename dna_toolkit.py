@@ -19,7 +19,7 @@ def read_fasta(filename):
 
 
 #DNA input
-filename = "sample_sequences.fasta"
+filename = "restriction_test.fasta"
 
 sequence_name, dna = read_fasta(filename)
 
@@ -51,9 +51,6 @@ print("C:", c)
 
 #%%
 #Visualizing Nucleotide counts
-from multiprocessing.resource_sharer import stop
-
-from multiprocessing.resource_sharer import stop
 
 import matplotlib.pyplot as plt
 
@@ -82,6 +79,34 @@ print(f"GC Content: {gc:.2f}%")
 
 at = ( a + t) / length * 100
 print(f"AT Content: {at:.2f}%")
+
+#%%
+# Restriction Enzyme Analysis
+
+restriction_enzymes = {
+    "EcoRI": "GAATTC",
+    "BamHI": "GGATCC",
+    "HindIII": "AAGCTT",
+    "NotI": "GCGGCCGC"
+}
+
+restriction_reports = ""
+
+print("\nRestriction Enzyme Analysis")
+
+for enzyme, site in restriction_enzymes.items():
+
+    if site in dna:
+
+        position = dna.find(site) + 1
+
+        print(f"{enzyme} site found at position {position}")
+
+        restriction_reports += f"{enzyme} Found at position {position}\n"
+    else:
+
+        print(f"{enzyme} site not found.")
+        restriction_reports += f"{enzyme} Not Found\n"
 
 # %%
 # reverse complement
@@ -118,7 +143,7 @@ if start == -1:
 
 else:
 
-    for i in range(start, len(rna), 3):
+    for i in range(0, len(rna), 3):
         codon = rna[i:i+3]
 
         if codon in stop_codons:
@@ -134,21 +159,21 @@ else:
 from codon_table import CODON_TABLE
 
 protein = ""
-for i in range(0,len(rna), 3):
-    codon = rna[i:i+3]
+for i in range(0,len(orf), 3):
+    codon = orf[i:i+3]
 
-    if len(codon) != 3:
+    if len(codon) < 3:
         break
 
-    amino = CODON_TABLE.get(codon)
+    amino = CODON_TABLE.get(codon, "?")
     
-    if amino == "Stop":
+    if amino == "*":
         break
 
     if amino:
         protein += amino
 
-print(protein)
+print("Protein Sequence:", protein)
 
 #%%
 report = f"""
@@ -159,6 +184,9 @@ Sequence Name       : {sequence_name}
 DNA Sequence        : {dna}
 Sequence Length     : {length} bp
 GC Content          : {gc:.2f}%
+AT Content          : {at:.2f}%
+Restriction Enzymes : {restriction_reports}
+
 Reverse Complement  : {reverse}
 RNA Sequence        : {rna}
 ORF                 : {orf}
@@ -188,6 +216,7 @@ with open("output/results.csv", "w", newline="") as file:
         "C",
         "GC Content(%)",
         "AT Content(%)",
+        "Restriction Enzymes",
         "Reverse Complement",
         "RNA Sequence",
         "ORF",
@@ -203,6 +232,7 @@ with open("output/results.csv", "w", newline="") as file:
         c,
         f"{gc:.2f}",
         f"{at:.2f}",
+        restriction_reports.replace("\n", "; "),
         reverse,
         rna,
         orf,
