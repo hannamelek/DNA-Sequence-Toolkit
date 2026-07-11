@@ -26,7 +26,7 @@ This project performs common molecular biology analyses, including nucleotide co
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 DNA Sequence Toolkit/
@@ -46,7 +46,7 @@ DNA Sequence Toolkit/
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 - Python 3
 - Matplotlib
@@ -58,7 +58,7 @@ DNA Sequence Toolkit/
 
 ---
 
-## 📥 Installation
+##  Installation
 
 Clone the repository:
 
@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 Open `dna_toolkit.py` in VS Code and run the script.
 
@@ -100,7 +100,7 @@ and run the program again.
 
 ---
 
-## 🧪 Example FASTA
+##  Example FASTA
 
 ```fasta
 >Sample_Sequence
@@ -109,7 +109,7 @@ ATGGCTAACCGTTAGCGATCGATCGTAGCTA
 
 ---
 
-## 📊 Example Output
+##  Example Output
 
 The toolkit reports:
 
@@ -148,7 +148,7 @@ MAN
 
 ---
 
-## 📈 Output Files
+##  Output Files
 
 After running the program, the following files are generated inside the `output/` folder:
 
@@ -160,7 +160,7 @@ After running the program, the following files are generated inside the `output/
 
 ---
 
-## 🧬 Restriction Enzymes Included
+##  Restriction Enzymes Included
 
 | Enzyme | Recognition Site |
 |---------|------------------|
@@ -171,7 +171,7 @@ After running the program, the following files are generated inside the `output/
 
 ---
 
-## 📚 Concepts Practiced
+##  Concepts Practiced
 
 This project helped reinforce:
 
@@ -192,7 +192,7 @@ This project helped reinforce:
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 Possible future enhancements include:
 
@@ -206,9 +206,9 @@ Possible future enhancements include:
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
-**Hanna Melek Henry**
+**Hanna Melek**
 
 B.Tech Biotechnology  
 SRM Institute of Science and Technology
