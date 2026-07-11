@@ -63,7 +63,7 @@ DNA Sequence Toolkit/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/DNA-Sequence-Toolkit.git
+git clone https://github.com/hannamelek/DNA-Sequence-Toolkit.git
 ```
 
 Move into the project folder:
