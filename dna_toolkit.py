@@ -58,7 +58,6 @@ print("C:", c)
 
 #%%
 #Visualizing Nucleotide counts
-
 import matplotlib.pyplot as plt
 
 bases = ["A", "T", "G", "C"]
