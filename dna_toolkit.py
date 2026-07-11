@@ -19,7 +19,14 @@ def read_fasta(filename):
 
 
 #DNA input
-filename = "restriction_test.fasta"
+import argparse
+
+parser = argparse.ArgumentParser(description="DNA Sequence Toolkit")
+parser.add_argument("filename", help="Input FASTA file")
+
+args = parser.parse_args()
+
+filename = args.filename
 
 sequence_name, dna = read_fasta(filename)
 
@@ -66,7 +73,6 @@ plt.ylabel("Count")
 
 plt.savefig("output/nucleotide_counts.png")
 
-plt.show()
 
 #%%
 #GC content calculation
