@@ -1,21 +1,21 @@
 
 =========== DNA Sequence Toolkit ===========
 
-Input File          : restriction_test.fasta
-Sequence Name       : Restriction_Test
-DNA Sequence        : ATGGAATTCTTTGGATCCGCTGACTAA
-Sequence Length     : 27 bp
-GC Content          : 40.74%
-AT Content          : 59.26%
-Restriction Enzymes : EcoRI Found at position 4
-BamHI Found at position 13
+Input File          : sample_sequences.fasta
+Sequence Name       : Human_Test_Sequence
+DNA Sequence        : ATGGCTAACCGTTAGCGATCGATCGTAGCTA
+Sequence Length     : 31 bp
+GC Content          : 48.39%
+AT Content          : 51.61%
+Restriction Enzymes : EcoRI Not Found
+BamHI Not Found
 HindIII Not Found
 NotI Not Found
 
 
-Reverse Complement  : TTAGTCAGCGGATCCAAAGAATTCCAT
-RNA Sequence        : AUGGAAUUCUUUGGAUCCGCUGACUAA
-ORF                 : AUGGAAUUCUUUGGAUCCGCUGACUAA
-Protein Sequence    : MEFFGSAD
+Reverse Complement  : TAGCTACGATCGATCGCTAACGGTTAGCCAT
+RNA Sequence        : AUGGCUAACCGUUAGCGAUCGAUCGUAGCUA
+ORF                 : AUGGCUAACCGUUAG
+Protein Sequence    : MANR
 
 Status              : Analysis completed successfully.
