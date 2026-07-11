@@ -1,34 +1,35 @@
 # 🧬 DNA Sequence Toolkit
 
-A beginner-friendly bioinformatics toolkit written in **Python** for analyzing DNA sequences from FASTA files.
+A command-line bioinformatics toolkit written in **Python** for analyzing DNA sequences from FASTA files.
 
-This project performs common molecular biology analyses, including nucleotide composition, GC/AT content calculation, reverse complement generation, RNA transcription, ORF detection, protein translation, and restriction enzyme site analysis. The toolkit also generates a summary report, CSV output, and a nucleotide count visualization.
+This project performs common molecular biology analyses, including nucleotide composition, GC/AT content calculation, reverse complement generation, RNA transcription, Open Reading Frame (ORF) detection, protein translation, and restriction enzyme site analysis. Results are exported as a text report, CSV summary, and nucleotide count visualization.
 
 ---
 
 ## ✨ Features
 
-- Read DNA sequences from a FASTA file
+- Read DNA sequences from FASTA files
 - Validate DNA sequences
 - Count nucleotides (A, T, G, C)
-- Calculate GC content
-- Calculate AT content
+- Calculate GC content (%)
+- Calculate AT content (%)
 - Generate the reverse complement
 - Transcribe DNA to RNA
 - Detect Open Reading Frames (ORFs)
 - Translate RNA into a protein sequence
 - Detect common restriction enzyme recognition sites
 - Generate a nucleotide count bar chart
-- Save results as:
+- Export results to:
   - Text report (`sample_report.txt`)
-  - CSV file (`results.csv`)
+  - CSV summary (`results.csv`)
   - PNG visualization (`nucleotide_counts.png`)
+- Accept FASTA files using **command-line arguments (argparse)**
 
 ---
 
-##  Project Structure
+## Project Structure
 
-```
+```text
 DNA Sequence Toolkit/
 │
 ├── output/
@@ -50,11 +51,12 @@ DNA Sequence Toolkit/
 
 - Python 3
 - Matplotlib
-- CSV module
+- argparse
+- CSV
 - File Handling
+- Functions
 - Dictionaries
 - Loops
-- Functions
 
 ---
 
@@ -66,13 +68,13 @@ Clone the repository:
 git clone https://github.com/hannamelek/DNA-Sequence-Toolkit.git
 ```
 
-Move into the project folder:
+Navigate into the project directory:
 
 ```bash
 cd DNA-Sequence-Toolkit
 ```
 
-Install dependencies:
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
@@ -80,27 +82,43 @@ pip install -r requirements.txt
 
 ---
 
-##  How to Run
+##  Usage
 
-Open `dna_toolkit.py` in VS Code and run the script.
+This project uses Python's **argparse** module to accept an input FASTA file directly from the command line.
 
-The program reads the FASTA file specified in:
+General syntax:
 
-```python
-filename = "sample_sequences.fasta"
+```bash
+python dna_toolkit.py <input_fasta_file>
 ```
 
-To analyze another sequence, simply change the filename:
+### Example 1
 
-```python
-filename = "restriction_test.fasta"
+Analyze the sample DNA sequence:
+
+```bash
+python dna_toolkit.py sample_sequences.fasta
 ```
 
-and run the program again.
+### Example 2
+
+Analyze the restriction enzyme test sequence:
+
+```bash
+python dna_toolkit.py restriction_test.fasta
+```
+
+### Example 3
+
+Analyze your own FASTA file:
+
+```bash
+python dna_toolkit.py your_sequence.fasta
+```
 
 ---
 
-##  Example FASTA
+##  Example FASTA File
 
 ```fasta
 >Sample_Sequence
@@ -111,24 +129,29 @@ ATGGCTAACCGTTAGCGATCGATCGTAGCTA
 
 ##  Example Output
 
-The toolkit reports:
+The toolkit performs the following analyses:
 
-- Sequence length
-- Nucleotide counts
+- Sequence Length
+- Nucleotide Counts
 - GC Content
 - AT Content
+- Restriction Enzyme Analysis
 - Reverse Complement
-- RNA Sequence
-- ORF
-- Protein Sequence
-- Restriction enzyme sites
+- RNA Transcription
+- ORF Detection
+- Protein Translation
 
 Example:
 
-```
-Sequence Length : 31 bp
-GC Content      : 48.39%
-AT Content      : 51.61%
+```text
+========== DNA Sequence Toolkit ==========
+
+Input File          : sample_sequences.fasta
+Sequence Name       : Sample_Sequence
+
+Sequence Length     : 31 bp
+GC Content          : 48.39%
+AT Content          : 51.61%
 
 Restriction Enzymes
 EcoRI      : Found at position 4
@@ -136,34 +159,40 @@ BamHI      : Found at position 13
 HindIII    : Not Found
 NotI       : Not Found
 
+Reverse Complement:
+TAGCTACGATCGATCGCTAACGGTTAGCCAT
+
 RNA Sequence:
 AUGGCUAACCGUUAGCGAUCGAUCGUAGCUA
 
 ORF:
 AUGGCUAACCGUUAG
 
-Protein:
+Protein Sequence:
 MAN
+
+Status:
+Analysis completed successfully.
 ```
 
 ---
 
 ##  Output Files
 
-After running the program, the following files are generated inside the `output/` folder:
+After execution, the following files are automatically generated inside the **output/** folder.
 
 | File | Description |
 |------|-------------|
 | `sample_report.txt` | Human-readable analysis report |
-| `results.csv` | Tabular summary of results |
-| `nucleotide_counts.png` | Bar chart of nucleotide frequencies |
+| `results.csv` | Summary of all calculated results |
+| `nucleotide_counts.png` | Bar chart showing nucleotide frequencies |
 
 ---
 
-##  Restriction Enzymes Included
+## Restriction Enzymes Included
 
-| Enzyme | Recognition Site |
-|---------|------------------|
+| Enzyme | Recognition Sequence |
+|---------|----------------------|
 | EcoRI | GAATTC |
 | BamHI | GGATCC |
 | HindIII | AAGCTT |
@@ -171,24 +200,35 @@ After running the program, the following files are generated inside the `output/
 
 ---
 
-##  Concepts Practiced
+##  Biological Analyses Performed
 
-This project helped reinforce:
+The toolkit demonstrates several fundamental bioinformatics workflows:
 
-- Python programming
-- Functions
+- DNA sequence validation
+- Nucleotide composition analysis
+- GC and AT content calculation
+- Reverse complement generation
+- DNA → RNA transcription
+- Open Reading Frame (ORF) identification
+- RNA → Protein translation using the genetic code
+- Restriction enzyme recognition site analysis
+
+---
+
+## Programming Concepts Practiced
+
+This project demonstrates the use of:
+
+- Python functions
 - Dictionaries
 - Loops
+- Conditional statements
 - String manipulation
 - File handling
 - CSV file generation
-- Data visualization with Matplotlib
+- Command-line argument parsing (`argparse`)
+- Data visualization using Matplotlib
 - FASTA file parsing
-- Molecular biology concepts
-  - DNA transcription
-  - ORF identification
-  - Protein translation
-  - Restriction enzyme analysis
 
 ---
 
@@ -196,13 +236,14 @@ This project helped reinforce:
 
 Possible future enhancements include:
 
-- Command-line support using `argparse`
-- Multi-sequence FASTA analysis
-- Support for additional restriction enzymes
-- Protein molecular weight calculation
+- Support for multi-FASTA files
+- Additional restriction enzymes
 - Amino acid composition analysis
-- GUI using Tkinter or Streamlit
-- Export results as PDF
+- Protein molecular weight calculation
+- Codon usage statistics
+- GC content sliding-window analysis
+- Interactive Streamlit web application
+- PDF report generation
 
 ---
 
@@ -213,8 +254,10 @@ Possible future enhancements include:
 B.Tech Biotechnology  
 SRM Institute of Science and Technology
 
-Learning Bioinformatics, Python, and Computational Biology through hands-on projects.
+Aspiring Bioinformatics Scientist with interests in computational biology, genomics, and Python-based bioinformatics tool development.
 
 ---
 
-⭐ If you found this project useful or interesting, feel free to star the repository!
+
+
+⭐ If you found this project useful, consider giving the repository a star!
