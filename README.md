@@ -131,8 +131,8 @@ GC Content      : 48.39%
 AT Content      : 51.61%
 
 Restriction Enzymes
-EcoRI      : Not Found
-BamHI      : Not Found
+EcoRI      : Found at position 4
+BamHI      : Found at position 13
 HindIII    : Not Found
 NotI       : Not Found
 
