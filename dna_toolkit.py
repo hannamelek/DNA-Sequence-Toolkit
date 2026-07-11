@@ -239,7 +239,4 @@ with open("output/results.csv", "w", newline="") as file:
         protein
     ])
 
-
-
-
 # %%
