@@ -1,2 +1,2 @@
 Sequence Name,Length(bp),A,T,G,C,GC Content(%),AT Content(%),Restriction Enzymes,Reverse Complement,RNA Sequence,ORF,Protein Sequence
-Restriction_Test,27,7,9,6,5,40.74,59.26,EcoRI Found at position 4; BamHI Found at position 13; HindIII Not Found; NotI Not Found; ,TTAGTCAGCGGATCCAAAGAATTCCAT,AUGGAAUUCUUUGGAUCCGCUGACUAA,AUGGAAUUCUUUGGAUCCGCUGACUAA,MEFFGSAD
+Human_Test_Sequence,31,8,8,8,7,48.39,51.61,EcoRI Not Found; BamHI Not Found; HindIII Not Found; NotI Not Found; ,TAGCTACGATCGATCGCTAACGGTTAGCCAT,AUGGCUAACCGUUAGCGAUCGAUCGUAGCUA,AUGGCUAACCGUUAG,MANR
