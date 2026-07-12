@@ -54,9 +54,6 @@ DNA Sequence Toolkit/
 - argparse
 - CSV
 - File Handling
-- Functions
-- Dictionaries
-- Loops
 
 ---
 
